@@ -2,7 +2,9 @@
 
 ## 📝 Your Notes
 
-Elaborate on your learnings here in `INSTRUCTIONS.md`
+redirects should happen on the server (not client) to get redirect status codes
+
+react router has userParams vs using URLSearchParams(window.location.search)
 
 ## Background
 

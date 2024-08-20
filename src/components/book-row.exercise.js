@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core'
 
-// We're going to turn the entire book row into a link to the book page
-// 🐨 import the Link component from react-router-dom
+import { Link } from 'react-router-dom'
 import * as mq from 'styles/media-queries'
 import * as colors from 'styles/colors'
 
@@ -20,13 +19,10 @@ function BookRow({book}) {
         position: 'relative',
       }}
     >
-      {/*
-          🐨 Turn this div into a Link
-          and add a to prop to make it direct to `/book/${book.id}`
-      */}
-      <div
+      <Link to={`/book/${book.id}`}>
         aria-labelledby={id}
-        css={{
+        {/* ncaught Error: Objects are not valid as a React child (found: object with keys {minHeight, flexGrow, display, gridTemplateColumns, gridGap, border, color, padding, borderRadius, :hover,:focus}). If you meant to render a collection of children, use an array instead. */}
+        {/* css={{
           minHeight: 270,
           flexGrow: 2,
           display: 'grid',
@@ -41,8 +37,8 @@ function BookRow({book}) {
             boxShadow: '0 5px 15px -5px rgba(0,0,0,.08)',
             color: 'inherit',
           },
-        }}
-      >
+        }} */}
+      </Link>
         <div
           css={{
             width: 140,
@@ -89,7 +85,6 @@ function BookRow({book}) {
           </small>
         </div>
       </div>
-    </div>
   )
 }
 
