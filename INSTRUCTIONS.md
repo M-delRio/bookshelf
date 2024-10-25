@@ -2,7 +2,13 @@
 
 ## 📝 Your Notes
 
-Elaborate on your learnings here in `INSTRUCTIONS.md`
+useCallback will return a memoized version of the callback that only changes if one of the inputs has changed.
+
+can then have a hook that returns return of useCallback wrapping a function with 
+dependency array 
+in this case user in dependency arr so only single function returned by hook and function has access to user, 
+otherwise func didn't have access to user via context cause within useEffect that has user in dep arr, otherwise need prop drilling
+to pass user directly to this func 
 
 ## Background
 
@@ -50,6 +56,7 @@ need from context.
 - `src/screens/discover.js`
 - `src/authenticated-app.js`
 - `src/unauthenticated-app.js`
+---
 
 ## Extra Credit
 
